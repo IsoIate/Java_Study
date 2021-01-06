@@ -33,3 +33,43 @@ bw.write(output + "\n");  // 개행 2
 bw.flush();
 bw.close();
 ```
+
+
+## StringTokenizer
+- split은 String클래스의 메소드로 추출한 문자를 배열로 저장한다
+- StringTokenizer는 메소드가 아니라 java.util에 포함되어 있는 자체 클래스
+- 각각 사용방법이 다르고 StringTokenizer클래스는 내부에 꼭 넣어야 하는 메소드가 존재함
+
+### countTokens
+- 마지막으로 토큰을 가져오기 전 남은 토큰 수를 출력하는 메소드 (int)
+
+### nextToken
+- 토큰을 읽어오는 메소드 (String)
+
+### 사용 예시
+```
+String input = "안녕하세요.반갑습니다.감사합니다";
+StringTokenizer st = new StringTokenizer(input, "."); // 다양한 문자로 구분 가능
+
+int count = st.countTokens(); // 토큰 수 확인
+
+for (int i = 0; i < count; i++) {
+  String data = st.nextToken(); // 토큰 
+  System.out.print(data + " "); 
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
